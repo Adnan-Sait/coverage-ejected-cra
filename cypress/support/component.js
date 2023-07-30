@@ -15,6 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
+import "../../src/index.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "font-awesome/css/font-awesome.css";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
