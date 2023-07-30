@@ -1,4 +1,5 @@
-import NavBar from "./navbar";
+import React from "react";
+import NavBar from "../../src/components/navbar";
 
 describe("Navbar", () => {
   it("should show the total items", () => {
