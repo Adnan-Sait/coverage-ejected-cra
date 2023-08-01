@@ -33,7 +33,6 @@ describe("Cart Operations", () => {
     cy.get("[data-cy='itemIncrementCount']").first().click();
 
     cy.get("[data-cy='itemCount']").first().contains("1");
-    cy.get("[data-cy='itemCount']").first().contains("1");
   });
 
   it("Decrement item quantity", () => {

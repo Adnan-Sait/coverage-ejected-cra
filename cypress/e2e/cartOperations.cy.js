@@ -18,7 +18,9 @@ describe("Initial State", () => {
   });
 
   it("App Restart button should be disabled", () => {
-    cy.get("[data-cy='appRefresh']").invoke("attr", "disabled").should("exist");
+    cy.get("[data-cy='appRefresh']")
+      .invoke("attr", "disabled")
+      .should("equal", "disabled");
   });
 
   it("App Restart button should be enabled when all items are deleted", () => {
