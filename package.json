@@ -23,7 +23,10 @@
     "cypress-e2e": "cypress run"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "globals": {
+      "cy": true
+    }
   },
   "browserslist": [
     ">0.2%",

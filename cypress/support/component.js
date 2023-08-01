@@ -12,7 +12,8 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-
+// type definitions for Cypress object "cy"
+/// <reference types="cypress" />
 // Import commands.js using ES2015 syntax:
 import "./commands";
 import "../../src/index.css";
