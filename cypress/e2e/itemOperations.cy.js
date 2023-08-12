@@ -8,9 +8,9 @@ describe("Initial State", () => {
   });
 
   it("All Items should have count as 'Zero'", () => {
+    cy.get("[data-cy='itemCount']").should("have.length", 4);
     cy.get("[data-cy='itemCount']").each(($el, index, list) => {
       // Returns the elements from the cy.get command
-      expect(list).to.have.length(4);
 
       // Returns the current element from the loop
       cy.wrap($el).contains("Zero");
@@ -19,7 +19,7 @@ describe("Initial State", () => {
 
   it("Decrement button should be disabled", () => {
     cy.get("[data-cy='itemDecrementCount']").each(($el, index, list) => {
-      cy.wrap($el).invoke("attr", "disabled").should("equal", "disabled");
+      cy.wrap($el).should("have.attr", "disabled").should("equal", "disabled");
     });
   });
 });
