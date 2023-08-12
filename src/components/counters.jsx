@@ -8,9 +8,10 @@ class Counters extends Component {
     return (
       <div>
         <div className="row">
-          <div className=''>
+          <div className="">
             <button
               className="btn btn-success m-2"
+              data-cy="cartReset"
               onClick={onReset}
               disabled={counters.length === 0 ? "disabled" : ""}
             >
@@ -18,6 +19,7 @@ class Counters extends Component {
             </button>
             <button
               className="btn btn-primary m-2"
+              data-cy="appRefresh"
               onClick={onRestart}
               disabled={counters.length !== 0 ? "disabled" : ""}
             >

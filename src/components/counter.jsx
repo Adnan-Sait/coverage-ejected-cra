@@ -6,12 +6,17 @@ class Counter extends Component {
       <div>
         <div className="row">
           <div className="">
-            <span style={{ fontSize: 24 }} className={this.getBadgeClasses()}>
+            <span
+              style={{ fontSize: 24 }}
+              className={this.getBadgeClasses()}
+              data-cy="itemCount"
+            >
               {this.formatCount()}
             </span>
           </div>
           <div className="">
             <button
+              data-cy="itemIncrementCount"
               className="btn btn-secondary"
               onClick={() => this.props.onIncrement(this.props.counter)}
             >
@@ -19,12 +24,14 @@ class Counter extends Component {
             </button>
             <button
               className="btn btn-info m-2"
+              data-cy="itemDecrementCount"
               onClick={() => this.props.onDecrement(this.props.counter)}
               disabled={this.props.counter.value === 0 ? "disabled" : ""}
             >
               <i className="fa fa-minus-circle" aria-hidden="true" />
             </button>
             <button
+              data-cy="itemDelete"
               className="btn btn-danger"
               onClick={() => this.props.onDelete(this.props.counter.id)}
             >
