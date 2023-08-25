@@ -36,6 +36,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@cypress/code-coverage": "^3.11.0",
     "cypress": "^12.17.2",
     "gh-pages": "^3.2.3"
   }
