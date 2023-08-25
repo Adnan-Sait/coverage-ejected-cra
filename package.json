@@ -82,6 +82,7 @@
   ],
   "devDependencies": {
     "@cypress/code-coverage": "^3.11.0",
+    "babel-plugin-istanbul": "^6.1.1",
     "cypress": "^12.17.2",
     "gh-pages": "^3.2.3"
   },
