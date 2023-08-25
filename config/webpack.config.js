@@ -96,6 +96,8 @@ module.exports = function (webpackEnv) {
   const isEnvProductionProfile =
     isEnvProduction && process.argv.includes('--profile');
 
+  const isCoverageEnabled = process.argv.includes("--coverage");
+
   // We will provide `paths.publicUrlOrPath` to our app
   // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
   // Omit trailing slash as %PUBLIC_URL%/xyz looks better than %PUBLIC_URL%xyz.
@@ -424,7 +426,7 @@ module.exports = function (webpackEnv) {
                   isEnvDevelopment &&
                     shouldUseReactRefresh &&
                     require.resolve('react-refresh/babel'),
-                    require.resolve("babel-plugin-istanbul"),
+                    isCoverageEnabled && require.resolve("babel-plugin-istanbul"),
                 ].filter(Boolean),
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
